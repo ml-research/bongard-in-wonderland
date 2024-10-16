@@ -1,0 +1,10 @@
+Your task is to determine the direction in which a spiral depicted in a 2D black and white diagram is turning. 
+The given diagram shows a spiral-like shape. In which direction is the spiral turning, starting from the center?
+
+Please decide carefully whether the spiral is turning in clockwise or counterclockwise direction. Take a deep breath and think step-by-step. Give your answer in the following format:
+```
+answer = {
+    "direction": <your answer>
+}
+```
+where <your answer> can be either "counterclockwise" or "clockwise".

@@ -1,0 +1,12 @@
+Your task is to determine the position of a circle in relation to a cavity in a 2D black and white diagram.
+
+The given diagram shows a shape with a cavity. From inside the figure, you need to decide if the circle is on the left or the right of the cavity. Carefully analyze the diagram step-by-step to identify the correct side.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "left" if the circle is to the left of the cavity or "right" if the circle is to the right of the cavity.

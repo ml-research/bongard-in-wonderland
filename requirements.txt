@@ -1,0 +1,11 @@
+anthropic==0.36.1
+beautifulsoup4==4.12.3
+numpy==2.1.2
+openai==1.51.2
+pandas==2.2.3
+protobuf==5.28.2
+Requests==2.32.3
+rtpt==0.0.4
+scikit_learn==1.5.2
+sglang==0.3.3.post1
+tqdm==4.65.0

@@ -1,0 +1,10 @@
+Your task is to determine the relative position of two objects in a 2D black and white diagram. 
+The given diagram shows a triangle and a circle. Which of the shapes is located above the other, i.e., has a higher y-value than the other?
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+```
+answer = {
+    "shape": <your answer>
+}
+```
+where <your answer> can be either "triangle" if the triangle is above the circle or "circle" if the circle is above the triangle.

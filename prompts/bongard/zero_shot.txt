@@ -1,0 +1,32 @@
+You are provided with a black-and-white image consisting of 12 simple diagrams. Each diagram represents shapes with specific features, such as geometric properties or higher-level concepts.
+
+- The 6 diagrams on the left side belong to Set A.
+- The 6 diagrams on the right side belong to Set B.
+
+## Task:
+
+Your task is to determine two distinct rules:
+
+1. Set A Rule: Identify a rule that applies to all diagrams in Set A.
+2. Set B Rule: Identify a separate rule that applies to all diagrams in Set B.
+
+Important: The rule for Set A must not apply to any diagram in Set B, and the rule for Set B must not apply to any diagram in Set A.
+
+## Step-by-Step Process:
+
+1. Diagram Analysis: Carefully describe each diagram in detail, noting any geometric properties, patterns, or conceptual features.
+2. Rule Derivation: Based on your analysis, deduce the rule for Set A and the rule for Set B, ensuring that each rule is unique to its set.
+
+## Final Answer Format:
+
+Provide the final answer using the following format:
+
+```python
+
+answer = {
+    'set A rule': '[LEFT RULE]',
+    'set B rule': '[RIGHT RULE]'
+}
+```
+
+Ensure that the rules are clearly defined, concise, and do not overlap between the sets.

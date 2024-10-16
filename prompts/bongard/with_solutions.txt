@@ -1,0 +1,37 @@
+You are provided with a black-and-white image consisting of 12 simple diagrams. Each diagram represents shapes with specific features, such as geometric properties or higher-level concepts.
+
+- The 6 diagrams on the left side belong to Set A.
+- The 6 diagrams on the right side belong to Set B.
+
+Additionally, you are given a list of possible rule pairs, one of which is true for this image. Your goal is to identify the correct rule pair based on the features of the diagrams in Set A and Set B.
+
+## Task:
+
+Your task is to identify and select the correct rule pair that is true for the sets. The rule pair is structured as follows:
+
+1. Rule part 1: This rule should apply to all diagrams in Set A
+2. Rule part 2: This rule should apply to all diagrams in Set B
+
+Important: The rule for Set A must not apply to any diagram in Set B, and the rule for Set B must not apply to any diagram in Set A.
+
+## Step-by-Step Process:
+
+1. Diagram Analysis: Carefully describe each diagram in detail, noting any geometric properties, patterns, or conceptual features.
+2. Rule Derivation: Based on your analysis of the diagrams, select one rule from the provided list for Set A and a different rule for Set B.
+
+## Available Rules 
+You can choose from the following rule pairs:
+
+<SOLUTIONS>
+
+## Final Answer Format:
+
+Provide the final answer using the following format:
+
+```python
+
+answer = {
+    'answer': <Solution ID>,
+}
+```
+Where <Solution ID> is the number corresponding to the correct rule pair that fits the criteria.

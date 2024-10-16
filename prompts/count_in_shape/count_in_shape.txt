@@ -1,0 +1,10 @@
+Your task is to determine if the number of objects inside a big shape is bigger than the number of objects outside of it in a 2D black and white diagram. 
+The given diagram shows a big shape that can contain smaller shapes inside it. There can also be other small shapes outside of the big shape. Is the number of shapes inside or outside the big shape higher?
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+```
+answer = {
+    "more shapes": <your answer>
+}
+```
+where <your answer> can be either "inside" if the number of shapes inside the big shape is higher or "outside" if the number of shapes outside the big shape is higher.

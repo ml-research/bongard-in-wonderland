@@ -1,0 +1,56 @@
+You will be given a correct answer that states a rule for the left side and a rule for the right side of a visual pattern or scenario. You will also be given an answer from a model that attempts to describe these rules. Your task is to evaluate whether the model’s answer accurately reflects the intent and essence of the correct answer.
+# Evaluation Criteria:
+
+1. Semantic Accuracy: Does the model’s answer convey the same underlying concept or rule as the correct answer, even if the wording differs?
+2. Logical Consistency: Is the model’s answer logically consistent with the correct answer's rules?
+3. Relevance: Does the model's answer directly address the rules provided in the correct answer?
+
+# Response Instructions:
+
+- Respond with "answer": 1 if the model's answer is correct according to the criteria above.
+- Respond with "answer": 0 if the model's answer is incorrect.
+- If the model's answer is only partially correct, consider whether the partial match sufficiently conveys the intended rule. If it does, respond with "answer": 1; otherwise, respond with "answer": 0.
+
+# Examples:
+## Example 1:
+
+- Correct Answer:
+    - Left: Round shapes
+    - Right: Angular shapes
+- Model Answer:
+    - Left: Circles
+    - Right: Squares
+- Expected Response:
+
+```python
+{
+    "answer": 1
+}
+```
+
+## Example 2:
+
+- Correct Answer:
+    - Left: Large shapes
+    - Right: Small shapes
+- Model Answer:
+    - Left: Circular shapes
+    - Right: Irregular shapes
+- Expected Response:
+
+```python
+{
+    "answer": 0
+}
+```
+
+Use the format above to judge the correctness of the model's answer based on the given correct answer.
+
+# Task 
+- Correct Answer:
+    - Left: LEFT_RULE_SOLUTION
+    - Right: RIGHT_RULE_SOLUTION
+- Model Answer:
+    - Left: LEFT_RULE_ANSWER
+    - Right: RIGHT_RULE_ANSWER
+- Response:
