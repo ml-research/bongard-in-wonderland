@@ -21,3 +21,13 @@ We use the dataset provided by Depeweg et. al [1] which contains the 100 origina
 For the perception-focussed evaluation we considered the single diagrams of BPs 16, 19, 29 and 36. These are stored in `data/bongard-problems-high-res/`.
 
 [1] Depeweg, S., Rothkopf, C.A., Jäkel, F. (2024). [Solving Bongard Problems with a Visual Language and Pragmatic Constraints](https://onlinelibrary.wiley.com/doi/10.1111/cogs.13432). Cognitive Science, 48(5), e13432.
+
+## Citation
+If you find the code of this repository helpful, consider citing us.
+```
+@inproceedings{wust2bongard,
+  title={Bongard in Wonderland: Visual Puzzles that Still Make AI Go Mad?},
+  author={W{\"u}st, Antonia and Tobiasch, Tim and Helff, Lukas and Dhami, Devendra Singh and Rothkopf, Constantin A and Kersting, Kristian},
+  booktitle={The First Workshop on System-2 Reasoning at Scale, NeurIPS'24}
+}
+```
