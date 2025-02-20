@@ -1,0 +1,12 @@
+Your task is to determine the relative position of a dark circle in relation to other shapes in a 2D black and white diagram.
+
+The given diagram displays an outline circle, a dark circle, and a triangle. You need to identify which of the two objects—the outline circle or the triangle—the dark circle is closer to. Carefully examine the spatial relationships in the diagram and determine the correct proximity.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "proximity": <your answer>
+}
+```
+where <your answer> can be either "outline circle" if the dark circle is closer to the outline circle, or "triangle" if the dark circle is closer to the triangle.

@@ -1,0 +1,12 @@
+Your task is to determine the position of a circle relative to a cavity as seen from within the confines of the structure in a 2D black and white diagram.
+
+The provided diagram illustrates a shape containing a cavity. Viewing from inside the figure, your goal is to ascertain whether the circle is situated to the left or the right of the cavity. Approach the analysis methodically to ensure an accurate identification of the circle's position.
+
+Please evaluate the diagram carefully. Focus intently on the details. Provide your answer using the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "left" if the circle is placed to the left of the cavity, or "right" if it is located to the right of the cavity.

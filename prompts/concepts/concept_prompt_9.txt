@@ -1,0 +1,12 @@
+Your task is to determine the type of contour present in a 2D black and white image.
+
+The given image depicts a figure, and your challenge is to distinguish whether the contour of this figure is smooth or twisting. Carefully analyze the lines and edges of the figure step-by-step to identify the nature of its contour.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "contour": <your answer>
+}
+```
+where <your answer> can be either "smooth" if the contour appears even and flowing, or "twisting" if the contour appears irregular or winding.

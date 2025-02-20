@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to assess the size of a hole depicted in a 2D black and white diagram.
+
+The given diagram displays a hole within a particular shape. Carefully examine the image to determine whether the hole is large or small. Consider the relative size of the hole compared to other elements in the diagram to make an accurate judgment.
+
+Please decide carefully. Take a deep breath and analyze step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "size": <your answer>
+}
+```
+where <your answer> can be either "large" if the hole is large or "small" if the hole is small.

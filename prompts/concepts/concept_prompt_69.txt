@@ -1,0 +1,14 @@
+Prompt:
+
+Your task is to analyze a botanical diagram and determine the position of a large black dot in relation to the branches of the plant depicted.
+
+The image shows a plant with various branches. Carefully examine the diagram to identify whether the large black dot is situated on the main branch or on one of the side branches. Consider the structure of the plant and the flow of the branches when making your decision.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "main branch" if the dot is on the main branch or "side branch" if it is on a side branch.

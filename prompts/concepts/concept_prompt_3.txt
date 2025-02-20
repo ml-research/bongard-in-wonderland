@@ -1,0 +1,13 @@
+Your task is to determine whether the figures depicted in a 2D black and white image are outlined or solid.
+
+The given image contains several geometric figures. You need to analyze the figures and decide if they are represented with outlines (hollow, with the interior transparent) or if they are fully solid (filled in with color or shade).
+
+Please examine the image carefully, taking note of the characteristics of the figures. Provide your answer in the following format:
+
+```python
+answer = {
+    "type": <your answer>
+}
+```
+
+where <your answer> can be either "Outline" if the figures are outlined, or "Solid" if the figures are solid.

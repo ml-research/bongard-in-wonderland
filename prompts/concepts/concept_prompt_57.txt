@@ -1,0 +1,14 @@
+Prompt:
+
+Your task is to evaluate whether two figures depicted in a 2D black and white image are identical or not.
+
+The given image shows two distinct geometric figures. Carefully analyze both figures step-by-step, considering shape, size, orientation, and any other visual attributes. Decide whether the figures are identical or if there are any differences between them.
+
+Please make your decision with precision. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "identical": <your answer>
+}
+```
+where <your answer> can be either "Yes" if the figures are identical or "No" if the figures are not identical.

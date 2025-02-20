@@ -1,0 +1,12 @@
+Your task is to determine the presence or absence of second-order side branches in a structural diagram.
+
+The given diagram displays a tree-like structure. Your objective is to ascertain whether there are any side branches extending from the primary branches, which we refer to as second-order side branches. Carefully examine the diagram to identify if such branches exist.
+
+Take your time to thoroughly analyze each branch structure in the image. Please give your answer in the following format:
+
+```python
+answer = {
+    "second_order_side_branches": <your answer>
+}
+```
+where <your answer> can be either "absence" if there are no side branches of the second order, or "presence" if there are side branches of the second order.

@@ -1,0 +1,12 @@
+Your task is to determine the presence of a solid black triangle in a 2D black and white diagram.
+
+The given diagram may or may not contain a solid black triangle. Carefully examine the image to identify if such a triangle is present. Consider the attributes like shape, color, and orientation to make your decision.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+where <your answer> can be either "present" if there is a solid black triangle in the image or "absent" if a solid black triangle is not present in the image.

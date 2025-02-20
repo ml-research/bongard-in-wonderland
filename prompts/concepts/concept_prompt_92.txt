@@ -1,0 +1,17 @@
+Certainly! Here is the formulated prompt for the given contrary concepts:
+
+---
+
+Your task is to determine the structure of a chain depicted in a 2D black and white diagram.
+
+The given diagram shows a chain-like structure. You need to carefully analyze the structure to decide if the chain branches or if it remains unbranched. Examine the diagram step-by-step to identify the correct structural characteristic of the chain.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "structure": <your answer>
+}
+```
+
+where <your answer> can be either "unbranched" if the chain does not branch, or "branched" if the chain branches.

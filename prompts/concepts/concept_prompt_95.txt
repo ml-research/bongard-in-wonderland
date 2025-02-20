@@ -1,0 +1,17 @@
+Certainly! Here is the formulated prompt for the given contrary concepts:
+
+---
+
+Your task is to determine the orientation of hatched lines in a 2D black and white diagram.
+
+The given diagram shows a shape with hatched lines. You need to decide if the lines are oriented vertically or horizontally. Carefully analyze the diagram step-by-step to identify the correct orientation of the hatched lines.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+
+where <your answer> can be either "vertical" if the hatched lines are oriented vertically, or "horizontal" if they are oriented horizontally.

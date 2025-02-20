@@ -61,9 +61,9 @@ def evaluate(model, mode=100):
     for i in range(1, 101):
 
         scores[i] = []
-        for seed in [1, 2, 3]:
+        for run in [1, 2, 3]:
 
-            response_path = f"{path}/BP_{i}/response_seed_{seed}.txt"
+            response_path = f"{path}/BP_{i}/response_run_{run}.txt"
             with open(response_path, "r") as file:
                 response = file.read()
 
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="gpt-4o")
-    parser.add_argument("--mode", type=int, default=100)
+    parser.add_argument("--mode", type=int, default=10)
 
     args = parser.parse_args()
 

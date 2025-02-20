@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to determine the orientation of a neck depicted in a 2D black and white diagram.
+
+The given diagram shows a part of a body featuring a neck. You need to analyze the diagram and decide whether the neck is positioned horizontally or vertically. Carefully examine the orientation by taking into account how the neck is aligned with respect to the body.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+where <your answer> can be either "horizontal" if the neck is aligned horizontally or "vertical" if the neck is aligned vertically.

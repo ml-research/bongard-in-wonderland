@@ -1,0 +1,14 @@
+Your task is to analyze a 2D black and white graph that depicts vibration amplitudes across a horizontal axis.
+
+The graph illustrates a specific pattern of vibration amplitudes along the horizontal axis from the left side to the right side. Your objective is to determine how the amplitude changes as you move from the left side to the right side of the graph. 
+
+Carefully examine the graph to identify whether the amplitude of vibrations is increasing or decreasing as you read from left to right. Take your time to analyze the details step-by-step.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "trend": <your answer>
+}
+```
+where <your answer> can be either "increases" if the amplitude increases from left to right, or "decreases" if it decreases from left to right.

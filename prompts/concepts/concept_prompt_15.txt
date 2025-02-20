@@ -1,0 +1,12 @@
+Your task is to determine whether the lines depicted in a 2D black and white diagram are closed or open.
+
+The given diagram features various lines. You need to analyze the lines carefully and decide if they form a continuous shape (closed) or if the ends of the lines are not joined (open). Examine the diagram methodically to identify the correct category of lines.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "line_type": <your answer>
+}
+```
+where <your answer> can be either "closed" if the lines form a continuous loop or "open" if the lines do not form a closed shape.

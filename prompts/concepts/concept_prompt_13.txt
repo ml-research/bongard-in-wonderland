@@ -1,0 +1,15 @@
+Prompt:
+
+Your task is to analyze a 2D black and white diagram and determine the orientation and shape of objects within the image. Carefully examine the image to identify whether the objects are arranged as vertical rectangles or horizontal ellipses, or alternatively, as vertical ellipses or horizontal rectangles.
+
+Consider the following steps in your analysis: observe the shape (rectangle or ellipse), and then determine its orientation (vertical or horizontal). Take your time to inspect each aspect of the objects to make a clear distinction.
+
+Please provide your determination in the following format:
+
+```python
+answer = {
+    "configuration": <your answer>
+}
+```
+
+where `<your answer>` can be either `"vertical rectangles or horizontal ellipses"` if you find that pattern, or `"vertical ellipses or horizontal rectangles"` for the opposite pattern.

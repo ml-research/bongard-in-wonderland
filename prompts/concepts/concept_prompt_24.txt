@@ -1,0 +1,12 @@
+Your task is to determine whether a circle is present in a 2D black and white image.
+
+The image provided may or may not contain a circular shape. Carefully analyze the image, focusing on identifying a simple geometric circle shape within the image. Consider the entire image without missing any subtle elements.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+where <your answer> can be either "A circle" if a circle is present in the image or "No circle" if there is no circle in the image.

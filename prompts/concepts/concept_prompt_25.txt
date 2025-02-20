@@ -1,0 +1,12 @@
+Your task is to identify the shape of a black figure depicted in a 2D black and white diagram.
+
+The given diagram includes a black figure. You need to determine whether this figure is a triangle or a circle. Carefully observe the attributes of the shape, such as the presence of angles or curvature, to identify which category it belongs to.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "shape": <your answer>
+}
+```
+where <your answer> can be either "triangle" if the black figure has three sides and corners, or "circle" if the black figure is completely round.

@@ -1,0 +1,12 @@
+Your task is to determine the relative size of figures depicted in a 2D black and white diagram.
+
+The given diagram features one or more figures, which may vary in size. Your job is to assess whether the figures are predominantly large or small. Carefully observe the attributes and proportion of the figures in comparison to known elements or reference points within the image.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "size": <your answer>
+}
+```
+where <your answer> can be either "large" if the figures are predominantly large, or "small" if the figures are predominantly small.

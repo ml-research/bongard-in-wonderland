@@ -1,0 +1,14 @@
+Prompt:
+
+Your task is to analyze a 2D black and white diagram where various figures are depicted. You need to determine the spatial arrangement between solid dark figures and outline figures within the image.
+
+The diagram presents both solid dark figures and outline figures. Carefully observe the positioning of these figures relative to each other. Are the solid dark figures positioned above the outline figures, or are the outline figures positioned above the solid dark figures?
+
+Please decide carefully. Take a moment to analyze the image step-by-step to identify the correct arrangement. Provide your answer in the following format:
+
+```python
+answer = {
+    "positioning": <your answer>
+}
+```
+where <your answer> can be either "solid above outline" if the solid dark figures are above the outline figures, or "outline above solid" if the outline figures are above the solid dark figures.

@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to determine the presence of second-order inside figures in a 2D black and white diagram.
+
+The given diagram may contain figures that are nested within other figures. You need to analyze the image to decide if there are inside figures of the second order, which means that there are figures nested within other nested figures. Carefully inspect each part of the diagram to identify these layers.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+where <your answer> can be either "present" if second-order inside figures are present or "absent" if there are no second-order inside figures.

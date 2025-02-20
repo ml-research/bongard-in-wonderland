@@ -1,0 +1,12 @@
+Your task is to determine whether a long animal in a provided 2D black and white sketch has a visible neck or lacks one.
+
+The given sketch shows an animal figure. Carefully inspect the illustration to decide if the animal depicted has a distinguishable neck structure or if it appears to be neckless.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "neck_presence": <your answer>
+}
+```
+where <your answer> can be either "A neck" if there is a visible neck or "No neck" if the neck is not discernible.

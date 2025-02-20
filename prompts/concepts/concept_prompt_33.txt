@@ -1,0 +1,15 @@
+Prompt: 
+
+Your task is to determine the presence of an acute angle in a 2D black and white diagram.
+
+The given diagram may contain various geometric shapes and lines. Carefully examine the image to identify whether there is at least one acute angle (an angle less than 90 degrees) present. 
+
+Please analyze each part of the diagram step-by-step to make your determination. Take a moment to think thoroughly before making your decision. Provide your answer in the following format:
+
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+
+where <your answer> can be either "acute angle" if there is at least one acute angle present or "no acute angle" if there are none.

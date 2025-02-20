@@ -1,0 +1,12 @@
+Your task is to analyze a 2D black and white diagram where points are arranged in relation to a neck-like structure. Carefully examine the image to determine the distribution of the points around the neck.
+
+The given diagram depicts a neck structure with points scattered nearby. You need to decide if the points are located on just one side of the neck or if they are distributed on both sides. Take a deep breath and carefully inspect the diagram to reach your conclusion.
+
+Please provide your answer in the following format:
+
+```python
+answer = {
+    "distribution": <your answer>
+}
+```
+where <your answer> can be either "one side" if the points are located on one side of the neck, or "both sides" if the points are located on both sides of the neck.

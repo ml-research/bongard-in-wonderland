@@ -1,0 +1,13 @@
+Your task is to determine the alignment of outline circles depicted in a 2D black and white diagram.
+
+The given diagram shows a series of outline circles. Your objective is to decide whether these circles appear aligned on a single straight line or not. Carefully examine the positioning of each circle in relation to the others and determine whether they form a straight line.
+
+Take your time to analyze the diagram methodically and give your answer in the following format:
+
+```python
+answer = {
+    "alignment": <your answer>
+}
+```
+
+where <your answer> can be either "on one straight line" if the circles are aligned in a straight line, or "not on one straight line" if they are not aligned.

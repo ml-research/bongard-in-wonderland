@@ -1,0 +1,12 @@
+Your task is to determine the orientation of the long axes of an ellipse and a rectangle in a 2D black and white diagram.
+
+The given diagram shows an ellipse and a rectangle. Your goal is to analyze their orientation and decide whether their long axes are perpendicular or parallel to each other. Carefully inspect the geometrical arrangement step-by-step to identify the correct relationship between their axes.
+
+Please decide carefully and think methodically. Provide your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+where <your answer> can be either "perpendicular" if the long axes are perpendicular to each other or "parallel" if the long axes are parallel to each other.

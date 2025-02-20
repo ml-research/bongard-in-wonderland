@@ -1,0 +1,15 @@
+Prompt:
+
+Your task is to analyze a 2D black and white diagram where multiple circles are depicted. You need to determine the arrangement of these circles in relation to two key orientations: horizontal and vertical.
+
+The image features several unconnected circles. Carefully observe whether these circles align horizontally or vertically within the diagram. Please take your time to consider the positioning step-by-step to ensure accuracy.
+
+Provide your decision in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+
+where `<your answer>` should be either "horizontal" if the circles are aligned in a horizontal line, or "vertical" if they are aligned in a vertical line.

@@ -1,0 +1,12 @@
+Your task is to determine the dominant type of circles depicted in a 2D black and white diagram.
+
+The given diagram contains multiple circles that can either be solid black or just outlines. Your objective is to decide whether there are more solid black circles or more outline circles in the diagram. Carefully analyze the diagram step-by-step to identify which type of circle is more prevalent.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "dominant_type": <your answer>
+}
+```
+where <your answer> can be either "solid black circles" if they are more prevalent or "outline circles" if they are more prevalent.

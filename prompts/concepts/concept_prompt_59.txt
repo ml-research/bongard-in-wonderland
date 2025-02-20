@@ -1,0 +1,13 @@
+Your task is to determine the similarity between figures depicted in a 2D black and white diagram.
+
+The given diagram shows multiple geometric figures. You need to analyze the figures and decide whether they are similar or not. Consider factors such as the shapes, sizes, and proportions of the figures to come to your conclusion. Carefully compare each figure step-by-step to identify their similarities or differences.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "similarity": <your answer>
+}
+```
+
+where <your answer> can be either "similar" if the figures are similar or "not similar" if they are not similar.

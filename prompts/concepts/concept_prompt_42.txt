@@ -1,0 +1,12 @@
+Your task is to determine the arrangement of points within the outline of a figure depicted in a 2D black and white diagram.
+
+The given diagram shows a closed figure with several points marked inside its outline. Your objective is to analyze these points and determine whether they align to form a straight line or not. Examine the arrangement of points thoroughly and step-by-step to reach a conclusion.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "arrangement": <your answer>
+}
+```
+where <your answer> can be either "straight line" if the points are on a straight line, or "not a straight line" if the points do not align to form a straight line.

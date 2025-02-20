@@ -1,0 +1,12 @@
+Your task is to evaluate the distribution of small circles in a 2D black and white diagram in relation to a figure outline.
+
+The given diagram features a larger outlined figure with multiple small circles both inside and outside this outline. Your task is to determine whether there are more small circles inside the figure outline or outside of it. Carefully analyze the diagram step-by-step and consider the number of circles in each region.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "distribution": <your answer>
+}
+```
+where <your answer> can be either "more inside" if there are more small circles inside the figure outline or "more outside" if there are fewer circles inside than outside.

@@ -1,0 +1,12 @@
+Your task is to determine the type of circle associated with branches in a 2D black and white diagram.
+
+The given diagram shows branches connecting to a circle. Carefully examine the image to identify whether the branches are connected to an outlined circle or a solid dark circle. Analyze the diagram step-by-step to come to an accurate conclusion.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "circle_type": <your answer>
+}
+```
+where <your answer> can be either "outlined" if the branches connect to an outlined circle or "solid dark" if the branches connect to a solid dark circle.

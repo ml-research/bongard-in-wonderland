@@ -1,0 +1,15 @@
+Prompt:
+
+Your task is to analyze a 2D black and white diagram where a single continuous line is drawn. The goal is to determine whether this line crosses over itself at any point.
+
+Examine the diagram closely to identify if the line has any parts where it overlaps or intersects itself, forming a crossover. Please proceed carefully, observing the entire length of the line to make a definitive conclusion.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "self_crossing": <your answer>
+}
+```
+
+where <your answer> can be either "yes" if the line has a self-crossing or "no" if the line does not cross itself.

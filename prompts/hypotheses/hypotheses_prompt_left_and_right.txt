@@ -1,0 +1,34 @@
+You are provided with a black-and-white image consisting of 12 simple diagrams. Each diagram represents shapes with specific features, such as geometric properties or higher-level concepts.
+
+- The 6 diagrams on the left side belong to Set A.
+- The 6 diagrams on the right side belong to Set B.
+
+## Task
+
+Propose multiple distinct hypotheses explaining how the diagrams in Set A might share a common rule (or set of rules) that does not apply to Set B, and vice versa. In other words, each hypothesis should outline:
+
+1. A feature or rule that unifies all 6 diagrams in Set A
+2. A different feature or rule that unifies all 6 diagrams in Set B
+
+These rules must be mutually exclusive—whatever defines Set A must not be true for Set B, and vice versa. You may consider a variety of factors, like shape type, number or count of shapes, orientation, symmetry, color usage, line style, or any other relevant factor — but only in the context of the 6 images of each set.
+
+## Answer Format
+
+1. Return your hypotheses as a Python list of pairs of strings.
+2. Each list element should be a tuple `(rule_for_Set_A, rule_for_Set_B)`.
+3. For example:
+```python
+    [
+        ("All the diagrams contain at least one triangular shape", "There exists no triangular shape in the diagrams"),
+        ("Each diagram features a single shape that is positioned in the bottom half of the diagram", "Each diagram features a single shape that is positioned in the upper half of the diagram"),
+        ...
+    ]
+```
+4. Ensure each rule is clear, specific and unique.
+5. Avoid stating which hypothesis seems most likely or correct; simply propose a variety of possibilities.
+
+## Additional Guidelines
+
+- Each hypothesis should stand on its own and be mutually exclusive to the other set.
+- Be creative, but only base your statements on plausible observations from the 12 diagrams.
+- Provide 20 distinct, well-defined hypotheses.

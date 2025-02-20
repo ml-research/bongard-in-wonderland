@@ -1,0 +1,14 @@
+Your task is to analyze a 2D black and white diagram containing a set of crosses and determine the nature of the shape formed by their convex hull.
+
+The image presents crosses scattered in the diagram, and your objective is to assess whether the convex hull that envelops all the crosses forms an equilateral triangle. 
+
+Carefully examine the arrangement and positions of the crosses to identify the geometric structure formed by their convex hull. 
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "convex_hull_shape": <your answer>
+}
+```
+where <your answer> can be either "equilateral triangle" if the convex hull of the crosses forms an equilateral triangle, or "not equilateral triangle" if it does not.

@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to determine the position of a triangle in relation to an arc in a 2D black and white diagram.
+
+The given diagram shows an arc and a triangle. You need to decide if the triangle is located on the concave side (inside the curve) or the convex side (outside the curve) of the arc. Carefully analyze the diagram step-by-step to identify the correct placement of the triangle.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "concave" if the triangle is on the concave side of the arc or "convex" if the triangle is on the convex side of the arc.

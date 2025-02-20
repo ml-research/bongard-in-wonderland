@@ -1,0 +1,12 @@
+Your task is to determine the number of distinct segments in a 2D black and white diagram.
+
+The given diagram consists of a shape that is divided into multiple parts. You need to carefully analyze the image to determine whether the shape is divided into three parts or four parts. Please inspect the diagram step-by-step to ensure accuracy in identifying the correct number of divisions.
+
+Take your time to consider each segment carefully. Once you are confident in your decision, provide your answer in the following format:
+
+```python
+answer = {
+    "parts": <your answer>
+}
+```
+where <your answer> can be either "three" if there are three parts or "four" if there are four parts.

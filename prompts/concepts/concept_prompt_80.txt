@@ -1,0 +1,15 @@
+Prompt: 
+
+Your task is to determine the relative distances of points from a cross depicted in a 2D black and white diagram.
+
+The given diagram includes several points arranged around a central cross. Your goal is to analyze the diagram and establish whether these points are equidistant from the cross or whether they are positioned at varying distances. Take a close look at each point and systematically evaluate their spatial arrangement around the cross.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "distance_relation": <your answer>
+}
+```
+
+where <your answer> can be either "same" if the points are at the same distances from the cross or "different" if the points are at different distances.

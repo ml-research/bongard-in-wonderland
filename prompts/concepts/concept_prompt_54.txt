@@ -1,0 +1,12 @@
+Your task is to determine the arrangement direction of three symbols — a cross, a circle, and a triangle — depicted in a 2D black and white image.
+
+The given image displays these three symbols in a circular pattern. Starting from the cross, analyze the sequence in which the circle and the triangle are arranged. Please carefully evaluate whether these symbols follow a clockwise or counterclockwise direction around the circle.
+
+Please decide carefully and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "arrangement": <your answer>
+}
+```
+where <your answer> can be either "counterclockwise" if the sequence is cross ➔ circle ➔ triangle in that direction or "clockwise" if the sequence is cross ➔ circle ➔ triangle in that direction.

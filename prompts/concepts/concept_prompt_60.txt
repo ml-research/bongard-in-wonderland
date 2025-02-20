@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to determine whether there are similar figures present in a 2D black and white diagram.
+
+The given diagram may contain multiple geometric shapes and patterns. Carefully examine the image to identify any figures that are similar in shape, size, or structure. Analyze the diagram step-by-step to determine if there are figures that resemble one another.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "similar_figures": <your answer>
+}
+```
+where <your answer> can be either "yes" if there are similar figures present in the diagram or "no" if there are no similar figures.

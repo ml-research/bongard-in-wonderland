@@ -1,0 +1,11 @@
+Your task is to determine the presence of symmetry in a 2D black and white diagram.
+
+Examine the given diagram and identify whether it possesses one or more axes of symmetry. An axis of symmetry means the shape can be divided into parts that are mirror images of each other. Carefully analyze the diagram step-by-step to determine if such an axis exists or if there are no axes of symmetry present.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+```python
+answer = {
+    "symmetry": <your answer>
+}
+```
+where <your answer> can be either "axes of symmetry" if there is at least one axis of symmetry, or "no axes of symmetry" if there are none.

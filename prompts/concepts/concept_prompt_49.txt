@@ -1,0 +1,12 @@
+Your task is to analyze the density distribution of points in relation to the contour of a figure in a given 2D black and white diagram.
+
+The diagram features a figure outlined by a contour with scattered points both inside and outside this contour. Determine where the points are more densely grouped: either inside the figure outline or outside the figure contour.
+
+Carefully examine the arrangement and spacing of the points within and outside the contour. Think methodically to identify the region of higher point density. Give your answer in the following format:
+
+```python
+answer = {
+    "density": <your answer>
+}
+```
+where <your answer> can be "inside" if the points are grouped more densely inside the figure outline, or "outside" if the points are grouped more densely outside the figure contour.

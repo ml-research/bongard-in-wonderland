@@ -1,0 +1,12 @@
+Your task is to determine the type of figure depicted in a 2D black and white diagram based on its shape characteristics.
+
+The given diagram shows one or more figures. You need to decide whether the figures are elongated, meaning they appear stretched out or lengthy, or if they are compact, implying they appear tightly packed or dense.
+
+Please analyze the diagram carefully, taking into account the proportion and arrangement of the figure(s). Take a deep breath and think step-by-step before deciding. Give your answer in the following format:
+
+```python
+answer = {
+    "type": <your answer>
+}
+```
+where <your answer> can be either "elongated" if the figures appear stretched or "compact" if they appear dense.

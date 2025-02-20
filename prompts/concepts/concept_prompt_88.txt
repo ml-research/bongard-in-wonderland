@@ -1,0 +1,12 @@
+Your task is to determine the number of distinct parts in a 2D black and white diagram.
+
+The given diagram consists of multiple sections or components. You need to analyze the image carefully and decide whether it is composed of three distinct parts or five distinct parts. Observe the boundaries and separations closely to make your decision.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "parts": <your answer>
+}
+```
+where `<your answer>` can be either "three" if the diagram has three distinct parts, or "five" if there are five distinct parts.

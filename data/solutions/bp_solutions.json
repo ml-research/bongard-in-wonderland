@@ -1,0 +1,402 @@
+{
+    "1": [
+        "Empty picture",
+        "Not empty picture"
+    ],
+    "2": [
+        "Large figures",
+        "Small figures"
+    ],
+    "3": [
+        "Outline figures",
+        "Solid figures"
+    ],
+    "4": [
+        "Convex figures",
+        "Nonconvex figures"
+    ],
+    "5": [
+        "Polygons",
+        "Curvilinear figures"
+    ],
+    "6": [
+        "Triangles",
+        "Quadrangles"
+    ],
+    "7": [
+        "Figures elongated vertically",
+        "Figures elongated horizontally"
+    ],
+    "8": [
+        "Figures on the right side",
+        "Figures on the left side"
+    ],
+    "9": [
+        "Smooth contour figures",
+        "Twisting contour figures"
+    ],
+    "10": [
+        "Triangles",
+        "Quadrangles"
+    ],
+    "11": [
+        "Elongated figures",
+        "Compact figures"
+    ],
+    "12": [
+        "Convex hull of figure elongated",
+        "Convex hull of figure compact"
+    ],
+    "13": [
+        "Vertical rectangles or horizontal ellipses",
+        "Vertical ellipses or horizontal rectangles"
+    ],
+    "14": [
+        "Large total line length",
+        "Small total line length"
+    ],
+    "15": [
+        "Closed lines",
+        "Open lines"
+    ],
+    "16": [
+        "Spiral curls counterclockwise",
+        "Spiral curls clockwise"
+    ],
+    "17": [
+        "An acute angle directed inward",
+        "No angle directed inward"
+    ],
+    "18": [
+        "A neck",
+        "No neck"
+    ],
+    "19": [
+        "Neck horizontal",
+        "Neck vertical"
+    ],
+    "20": [
+        "Points located on one side of the neck",
+        "Points located on both sides of the neck"
+    ],
+    "21": [
+        "Small figure present",
+        "No small figure present"
+    ],
+    "22": [
+        "Areas of figures approximately equal",
+        "Areas of figures differ greatly"
+    ],
+    "23": [
+        "One figure",
+        "Two figures"
+    ],
+    "24": [
+        "A circle",
+        "No circle"
+    ],
+    "25": [
+        "Black figure is a triangle",
+        "Black figure is a circle"
+    ],
+    "26": [
+        "Solid black triangle",
+        "No solid black triangle"
+    ],
+    "27": [
+        "More solid black figures",
+        "More outline figures"
+    ],
+    "28": [
+        "More solid black circles",
+        "More outline circles"
+    ],
+    "29": [
+        "There are more small circles inside the figure outline than outside",
+        "There are fewer small circles inside the figure outline than outside"
+    ],
+    "30": [
+        "A line with a self-crossing",
+        "A line without a self-crossing"
+    ],
+    "31": [
+        "One line",
+        "Two lines"
+    ],
+    "32": [
+        "A sharp projection",
+        "No sharp projection"
+    ],
+    "33": [
+        "Acute angle",
+        "No acute angle"
+    ],
+    "34": [
+        "A large hole",
+        "A small hole"
+    ],
+    "35": [
+        "The axis of the hole is parallel to the figure axis",
+        "The axis of the hole is perpendicular to the figure axis"
+    ],
+    "36": [
+        "Triangle above circle",
+        "Circle above triangle"
+    ],
+    "37": [
+        "Triangle above circle",
+        "Circle above triangle"
+    ],
+    "38": [
+        "Triangle larger than circle",
+        "Triangle smaller than circle"
+    ],
+    "39": [
+        "Segments almost parallel to each other",
+        "Large angles between segments"
+    ],
+    "40": [
+        "Three points on a straight line",
+        "No three points on a straight line"
+    ],
+    "41": [
+        "Outline circles on one straight line",
+        "Outline circles not on one straight line"
+    ],
+    "42": [
+        "Points inside the figure outline are on a straight line",
+        "Points inside the figure outline are not on a straight line"
+    ],
+    "43": [
+        "The vibration amplitude increases from left to right",
+        "The vibration amplitude decreases from left to right"
+    ],
+    "44": [
+        "Small circles on different arcs",
+        "Small circles on one arc"
+    ],
+    "45": [
+        "Outline figure on top of solid black figure",
+        "Black figure on top of outline figure"
+    ],
+    "46": [
+        "Triangle on top of the circle",
+        "Circle on top of the triangle"
+    ],
+    "47": [
+        "Triangle inside of the circle",
+        "Circle inside of the triangle"
+    ],
+    "48": [
+        "Solid dark figures above the outline figures",
+        "Outline figures above the solid dark figures"
+    ],
+    "49": [
+        "Points inside the figure outline are grouped more densely than outside the contour",
+        "Points outside the figure contour are grouped more densely than inside the contour"
+    ],
+    "50": [
+        "Axes of symmetry",
+        "No axes of symmetry"
+    ],
+    "51": [
+        "Two circles close to each other",
+        "No two circles close to each other"
+    ],
+    "52": [
+        "Arrows pointing in different directions",
+        "Arrows pointing in the same direction"
+    ],
+    "53": [
+        "Inside figure has fewer angles than outside figure",
+        "Inside figure has more angles than outside figure"
+    ],
+    "54": [
+        "A cross, circle, and triangle arranged counterclockwise",
+        "A cross, circle, and triangle arranged clockwise"
+    ],
+    "55": [
+        "A circle is at the left of the cavity if you look from inside the figure",
+        "A circle is at the right of the cavity if you look from inside the figure"
+    ],
+    "56": [
+        "All figures of the same color",
+        "Figures of different colors"
+    ],
+    "57": [
+        "Identical figures",
+        "Figures not identical"
+    ],
+    "58": [
+        "Solid dark quadrangles are identical",
+        "Solid dark quadrangles are different"
+    ],
+    "59": [
+        "Figures are similar",
+        "Figures are not similar"
+    ],
+    "60": [
+        "Some similar figures",
+        "No similar figures"
+    ],
+    "61": [
+        "A line separates the crosses in half",
+        "A line does not separate the crosses in half"
+    ],
+    "62": [
+        "Ends of the curve are far apart",
+        "Ends of the curve are close together"
+    ],
+    "63": [
+        "Shading thicker on the right side",
+        "Shading thicker on the left side"
+    ],
+    "64": [
+        "A cross is located on the extension of the ellipse axis",
+        "A circle is located on the extension of the ellipse axis"
+    ],
+    "65": [
+        "A set of triangles elongated horizontally",
+        "A set of triangles elongated vertically"
+    ],
+    "66": [
+        "Unconnected circles on a horizontal line",
+        "Unconnected circles on a vertical line"
+    ],
+    "67": [
+        "The right branch begins at a higher point than the left branch",
+        "The right branch begins at a lower point than the left branch"
+    ],
+    "68": [
+        "The end of the right branch is higher than that of the left branch",
+        "The end of the right branch is lower than that of the left branch"
+    ],
+    "69": [
+        "Large black dot on the main branch",
+        "Large black dot on a side branch"
+    ],
+    "70": [
+        "There are no side branches of the second order",
+        "There are side branches of the second order"
+    ],
+    "71": [
+        "There are inside figures of the second order",
+        "There are no inside figures of the second order"
+    ],
+    "72": [
+        "Ends of the curve are parallel",
+        "Ends of the curve are perpendicular"
+    ],
+    "73": [
+        "The long axes of the ellipse and rectangle are perpendicular",
+        "The long axes of the ellipse and rectangle are parallel"
+    ],
+    "74": [
+        "A tail grows from the obtuse end",
+        "A tail grows from the acute end"
+    ],
+    "75": [
+        "Triangle located at the concave side of an arc",
+        "Triangle located at the convex side of an arc"
+    ],
+    "76": [
+        "Long sides concave",
+        "Long sides convex"
+    ],
+    "77": [
+        "Angle divided in half",
+        "Angle not divided in half"
+    ],
+    "78": [
+        "Extensions of segments cross at one point",
+        "Extensions of segments do not cross at one point"
+    ],
+    "79": [
+        "A dark circle is closer to the outline circle than to the triangle",
+        "A dark circle is closer to the triangle than to the outline circle"
+    ],
+    "80": [
+        "Points located at the same distances from a cross",
+        "Points located at different distances from a cross"
+    ],
+    "81": [
+        "Dark figures can be divided from outline figures by a straight linealternatively: Convex hulls of filled and outlined figures overlap",
+        "Dark figures are impossible to separatealternatively: Convex hulls of filled and outlined figures do not overlap"
+    ],
+    "82": [
+        "The convex hull of the crosses forms an equilateral triangle",
+        "The convex hull of the crosses does not form an equilateral triangle"
+    ],
+    "83": [
+        "A circle is inside of a figure made by crosses",
+        "A circle is outside of a figure made by crosses"
+    ],
+    "84": [
+        "A quadrangle is outside of a figure made by circles",
+        "A quadrangle is inside of a figure made by circles"
+    ],
+    "85": [
+        "Three parts",
+        "Five parts"
+    ],
+    "86": [
+        "Three parts",
+        "Five parts"
+    ],
+    "87": [
+        "Four parts",
+        "Five parts"
+    ],
+    "88": [
+        "Three parts",
+        "Five parts"
+    ],
+    "89": [
+        "Three parts",
+        "Five parts"
+    ],
+    "90": [
+        "Three parts",
+        "Four parts"
+    ],
+    "91": [
+        "Three identical elements",
+        "Four identical elements"
+    ],
+    "92": [
+        "The chain does not branch",
+        "The chain branches"
+    ],
+    "93": [
+        "Branches at outlined circle",
+        "Branches at solid dark circle"
+    ],
+    "94": [
+        "Solid dark circle not at end",
+        "Solid dark circle at end"
+    ],
+    "95": [
+        "Vertical hatched lines",
+        "Horizontal hatched lines"
+    ],
+    "96": [
+        "Triangles",
+        "Quadrangles"
+    ],
+    "97": [
+        "Triangles",
+        "Circles"
+    ],
+    "98": [
+        "Triangles",
+        "Quadrangles"
+    ],
+    "99": [
+        "Outlines made by triangles and circles intersect",
+        "Outlines made by triangles and circles do not intersect"
+    ],
+    "100": [
+        "The letter \u0410",
+        "The letter \u0411"
+    ]
+}

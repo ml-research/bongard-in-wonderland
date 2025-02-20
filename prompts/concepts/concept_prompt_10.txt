@@ -1,0 +1,13 @@
+Your task is to determine the type of geometric shapes predominantly depicted in a 2D black and white diagram.
+
+The given diagram features multiple geometric shapes. Your task is to identify the primary type of shapes present. Carefully analyze the shape characteristics such as the number of sides and corners to determine whether the diagram is primarily composed of triangles or quadrangles.
+
+Please make your decision carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "shape": <your answer>
+}
+```
+
+where <your answer> can be either "Triangles" if most of the shapes are triangles, or "Quadrangles" if most of the shapes are quadrangles.

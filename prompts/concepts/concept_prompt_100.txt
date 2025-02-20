@@ -1,0 +1,12 @@
+Your task is to identify which letter is depicted in a given 2D black and white diagram.
+
+The diagram presents a single character which represents one of two possible letters from the Cyrillic alphabet. Carefully analyze the shape and structure of the character to determine which letter it represents.
+
+Please decide carefully by examining the distinctive features of each letter. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "letter": <your answer>
+}
+```
+where <your answer> can be either "А" if the letter in the image is the Cyrillic letter А, or "Б" if it is the Cyrillic letter Б.

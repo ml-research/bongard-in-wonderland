@@ -1,0 +1,13 @@
+Your task is to determine the shape that is located on the extension of the ellipse axis in a 2D black and white diagram.
+
+The given diagram depicts an ellipse with at least one axis extended outward. Carefully observe the extended axis to identify whether there is a cross or a circle positioned along this line. Please analyze the image thoroughly and step-by-step to make an accurate determination.
+
+Take a deep breath and think carefully to ensure the correct shape is identified. Provide your answer in the following format:
+
+```python
+answer = {
+    "shape": <your answer>
+}
+```
+
+where <your answer> can be either "cross" if a cross is located on the extension of the ellipse axis, or "circle" if a circle is placed there.

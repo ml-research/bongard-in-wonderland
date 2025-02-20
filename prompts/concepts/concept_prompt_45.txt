@@ -1,0 +1,12 @@
+Your task is to identify the layering order of figures in a 2D black and white diagram.
+
+The given diagram shows two figures: one is a solid black figure and the other is an outline figure. Your goal is to determine which figure is on top of the other. Carefully analyze the layering of the figures in the diagram.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "layering": <your answer>
+}
+```
+where `<your answer>` can be either "outline on top" if the outline figure is above the solid black figure or "black on top" if the black figure is above the outline figure.

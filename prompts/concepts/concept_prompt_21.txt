@@ -1,0 +1,13 @@
+Your task is to determine the presence of a small figure within a 2D black and white diagram.
+
+The given diagram may or may not include a small figure. Carefully examine each element within the diagram step-by-step to determine whether a small figure is indeed present or not.
+
+Please examine the diagram meticulously. Take a deep breath and think through each part of the image. Provide your answer in the following format:
+
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+
+where <your answer> can be either "present" if a small figure is in the image, or "absent" if there is no small figure.

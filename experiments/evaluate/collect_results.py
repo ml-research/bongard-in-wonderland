@@ -2,11 +2,18 @@ import json
 import numpy as np
 import pandas as pd
 
+import sys
+
+from experiments.evaluate.model_names import map_model_names
+
 
 def main(models, mode):
 
     # create dataframe with bp_id as index and model as column
     df = pd.DataFrame(index=[str(x) for x in range(1, 100)], columns=models)
+    df_percentage = pd.DataFrame(index=[str(x) for x in range(1, 100)], columns=models)
+
+    df_runs = pd.DataFrame(index=[str(x) for x in range(1, 100)])
 
     for model in models:
 
@@ -35,15 +42,19 @@ def main(models, mode):
             elif num_solved == 3:
                 df.loc[bp_id, model] = "\cellcolor{PineGreen!25}3/3"
 
-            for seed_id, score in enumerate(bp_scores):
+            df_percentage.loc[bp_id, model] = num_solved / 3
+
+            for run, score in enumerate(bp_scores):
 
                 if score == 1:
-                    n_solved_bps[seed_id] += 1
+                    n_solved_bps[run] += 1
+
+                df_runs.loc[bp_id, f"{model}_run_{run+1}"] = score
 
         print(f"Model: {model}")
-        print(f"Seed 1: {n_solved_bps[0]}")
-        print(f"Seed 2: {n_solved_bps[1]}")
-        print(f"Seed 3: {n_solved_bps[2]}")
+        print(f"Run 1: {n_solved_bps[0]}")
+        print(f"Run 2: {n_solved_bps[1]}")
+        print(f"Run 3: {n_solved_bps[2]}")
 
         # get mean
         mean_solved_bps = sum(n_solved_bps) / len(n_solved_bps)
@@ -53,19 +64,29 @@ def main(models, mode):
         print(f"Mean: {mean_solved_bps}")
         print(f"Std: {n_solved_bps_std}")
 
+    # rename columns
+    df.columns = [map_model_names(model) for model in df.columns]
     # print df as latex table
     print(df.to_latex())
+
+    # save df as csv
+    df_percentage.to_csv(f"results/bongard/summary_{mode}.csv")
+    df_runs.to_csv(f"results/bongard/summary_runs_{mode}.csv")
 
 
 if __name__ == "__main__":
 
     models = [
+        "o1",
         "gpt-4o",
-        "claude",
+        "claude-3-5-sonnet-20241022",
+        "gemini-2.0-flash-exp",
         "gemini",
-        # "llava_1.6",
-        "llava_1.5",
+        "LlavaOnevision",
+        "Qwen2VL",
+        "InternVL2_5",
     ]
+
     main(models, mode="zero_shot")
-    main(models, mode=100)
     main(models, mode=10)
+    main(models, mode=100)

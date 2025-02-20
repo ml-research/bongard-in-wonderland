@@ -1,9 +1,43 @@
 import json
 import sys
 import argparse
+import string
+import pandas as pd
 
 sys.path.append("gpt4")
-from prompt_llm import GPT4Prompter
+from main import GPT4Prompter
+
+
+class LLMJudge:
+    def __init__(self, model="gpt-4o"):
+        self.model = GPT4Prompter(model=model)
+        self.system_prompt = open("prompts/bongard/system_prompt.txt", "r").read()
+        self.base_prompt = open("prompts/llm_judge/judge_prompt.txt", "r").read()
+
+    def judge_answer(self, left_rule, right_rule, solution):
+        current_judge_prompt = (
+            self.base_prompt.replace("LEFT_RULE_SOLUTION", solution[0])
+            .replace("RIGHT_RULE_SOLUTION", solution[1])
+            .replace("LEFT_RULE_ANSWER", left_rule)
+            .replace("RIGHT_RULE_ANSWER", right_rule)
+        )
+
+        response = self.model.prompt(
+            current_judge_prompt, system_prompt=self.system_prompt, temp=0.0
+        )
+        response_content = parse_answer(response)
+        return response_content["answer"]
+
+    def judge_left_answer(self, rule, solution):
+        current_judge_prompt = self.base_prompt.replace(
+            "RULE_SOLUTION", solution
+        ).replace("RULE_ANSWER", rule)
+
+        response = self.model.prompt(
+            current_judge_prompt, system_prompt=self.system_prompt, temp=0.0
+        )
+        response_content = parse_answer(response)
+        return response_content["answer"]
 
 
 def parse_dict(response_content):
@@ -30,18 +64,38 @@ def parse_dict(response_content):
     response_content = response_content.replace('"+"', "'+'")
     response_content = response_content.replace('"Б"', "'Б'")
     response_content = response_content.replace('"A"', "'A'")
+    # same with small letters
+    response_content = response_content.replace('"a"', "'a'")
     response_content = response_content.replace('"B"', "'B'")
+    # v
+    response_content = response_content.replace('"v"', "'v'")
+    # c
+    response_content = response_content.replace('"c"', "'c'")
 
     response_content = response_content.replace('"Б', "'Б")
     response_content = response_content.replace("\"A'", "'A'")
+    # same with small letters
+    response_content = response_content.replace('"a', "'a")
     response_content = response_content.replace("\"B'", "'B'")
 
     response_content = response_content.replace('"Y"', "'Y'")
     response_content = response_content.replace("\"Y'", "'Y'")
     response_content = response_content.replace('"x"', "'x'")
     response_content = response_content.replace("\"x'", "'x'")
+    # same with o
+    response_content = response_content.replace('"o"', "'o'")
+    response_content = response_content.replace("\"o'", "'o'")
     response_content = response_content.replace('"L"', "'L'")
     response_content = response_content.replace("\"L'", "'L'")
+    # same with B
+    response_content = response_content.replace('"B"', "'B'")
+    response_content = response_content.replace("\"B'", "'B'")
+    # D
+    response_content = response_content.replace('"D"', "'D'")
+    response_content = response_content.replace("\"D'", "'D'")
+    # P
+    response_content = response_content.replace('"P"', "'P'")
+    response_content = response_content.replace("\"P'", "'P'")
 
     response_content = response_content.replace("\\", "")
     response_content = response_content.replace("shape's", "shapes")
@@ -75,9 +129,24 @@ def parse_answer(response_content):
     response_content = response_content.replace('0"', "0")
     response_content = response_content.replace('1"', "1")
 
+    # letters
+    all_small_letters = list(string.ascii_lowercase)
+    all_capital_letters = list(string.ascii_uppercase)
+
+    for letter in all_small_letters:
+        response_content = response_content.replace(f'"{letter}"', f"'{letter}'")
+        response_content = response_content.replace(f"{letter}'s", f"{letter}s")
+
+    for letter in all_capital_letters:
+        response_content = response_content.replace(f'"{letter}"', f"'{letter}'")
+        response_content = response_content.replace(f"{letter}'s", f"{letter}s")
+
+    response_content = response_content.replace('"Б"', "'Б'")
+
     try:
         response_content = json.loads(response_content)
     except:
+        print("Could not parse json from response_content")
         raise ValueError(
             f"Could not parse json from response_content: {response_content}"
         )
@@ -104,27 +173,15 @@ def evaluate(model, mode="zero_shot"):
 
     solutions = json.load(open("data/solutions/bp_solutions.json"))
 
-    system_prompt_path = "prompts/bongard/system_prompt.txt"
-    system_prompt = open(system_prompt_path, "r").read()
-
-    judge_prompt_path = "prompts/llm_judge/judge_prompt.txt"
-    judge_prompt = open(judge_prompt_path, "r").read()
-
     if mode == "zero_shot":
         path = f"results/bongard/zero_shot/{model}"
-        seeds = [1, 2, 3]
-    elif mode == "zero_shot_human":
-        path = f"results/bongard/zero_shot_human/{model}"
-        seeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-    elif mode == "attributes":
-        path = f"results/bongard/with_attributes/{model}"
-        seeds = [1, 2, 3]
+        runs = [1, 2, 3]
 
     for i in range(1, 101):
 
         scores[i] = []
-        for seed in seeds:
-            response_path = f"{path}/BP_{i}/response_seed_{seed}.txt"
+        for run in runs:
+            response_path = f"{path}/BP_{i}/response_run_{run}.txt"
 
             try:
                 with open(response_path, "r") as file:
@@ -150,30 +207,13 @@ def evaluate(model, mode="zero_shot"):
                         f"Could not parse rules from response_content: {response_content}"
                     )
 
-            print(f"BP {i} Seed {seed}: {left_rule} vs {right_rule}")
+            print(f"BP {i} Run {run}: {left_rule} vs {right_rule}")
 
-            # get current judge prompt
-            current_solution = solutions[str(i)]
-            current_judge_prompt = get_current_judge_prompt(
-                judge_prompt, current_solution, left_rule, right_rule
-            )
+            # use LLMJudge
+            judge = LLMJudge()
 
-            # prompt with current judge prompt
-            prompter = GPT4Prompter(model="gpt-4o")
-            response = prompter.prompt(
-                current_judge_prompt, system_prompt=system_prompt
-            )
+            score = judge.judge_answer(left_rule, right_rule, solutions[str(i)])
 
-            # parse answer from response
-            try:
-                response_content = parse_answer(response)
-            except:
-                print(f"Could not parse answer from response: {response}")
-                response_content = {"answer": -1}
-                continue
-
-            # get score
-            score = response_content["answer"]
             scores[i].append(score)
 
     # remove empty entries
@@ -185,87 +225,50 @@ def evaluate(model, mode="zero_shot"):
         json.dump(scores, file)
 
 
-def evaluate_single(model, mode="zero_shot"):
-    scores = {}
+def aggregate_answers(model):
 
-    solutions = json.load(open("data/solutions/bp_solutions.json"))
+    # create dataframe with bp_id as index and three models answers as columns
+    df = pd.DataFrame(
+        index=[str(x) for x in range(1, 100)],
+        columns=[
+            "trial 1 answer left",
+            "trial 1 answer right",
+            "judge 1",
+            "trial 2 answer left",
+            "trial 2 answer right",
+            "judge 2",
+            "trial 3 answer left",
+            "trial 3 answer right",
+            "judge 3",
+        ],
+    )
 
-    system_prompt_path = "prompts/bongard/system_prompt.txt"
-    system_prompt = open(system_prompt_path, "r").read()
-
-    judge_prompt_path = "prompts/llm_judge/judge_prompt_single.txt"
-    judge_prompt = open(judge_prompt_path, "r").read()
-
-    if mode == "zero_shot":
-        path = f"results/bongard/zero_shot/{model}"
-    elif mode == "attributes":
-        path = f"results/bongard/with_attributes/{model}"
+    path = f"results/bongard/zero_shot/{model}"
 
     for i in range(1, 101):
 
-        scores[i] = []
-        for seed in [1, 2, 3]:
-            response_path = f"{path}/BP_{i}/response_seed_{seed}.txt"
+        scores = json.load(open(f"{path}/scores.json"))
 
-            try:
-                with open(response_path, "r") as file:
-                    response = file.read()
-            except:
-                print(f"Could not read response from {response_path}")
-                continue
+        for run in [1, 2, 3]:
 
-            # parse answer from response
-            response_content = parse_dict(response)
+            bp_scores = scores[str(i)][run - 1]
 
-            # get answer
-            try:
-                left_rule = response_content["set A rule"]
-                right_rule = response_content["set B rule"]
-            except:
-                if len(response_content) >= 2:
-                    # get first entry of dict
-                    left_rule = response_content[list(response_content.keys())[0]]
-                    right_rule = response_content[list(response_content.keys())[1]]
-                else:
-                    raise ValueError(
-                        f"Could not parse rules from response_content: {response_content}"
-                    )
+            # parse model response
+            response_path = f"{path}/BP_{i}/response_run_{run}.txt"
 
-            print(f"BP {i} Seed {seed}: {left_rule} vs {right_rule}")
+            # read response from file
+            with open(response_path, "r") as file:
+                response = file.read()
 
-            bp_scores = [0, 0]
+            response = parse_dict(response)
 
-            for id, rule in enumerate([left_rule, right_rule]):
+            df.loc[str(i), f"trial {run} answer left"] = response["set A rule"]
+            df.loc[str(i), f"trial {run} answer right"] = response["set B rule"]
 
-                # get current judge prompt
-                current_solution = solutions[str(i)]
-                current_judge_prompt = get_current_judge_prompt_single(
-                    judge_prompt, current_solution[id], rule
-                )
+            df.loc[str(i), f"judge {run}"] = bp_scores
 
-                # prompt with current judge prompt
-                prompter = GPT4Prompter(model="gpt-4o")
-                response = prompter.prompt(
-                    current_judge_prompt, system_prompt=system_prompt
-                )
-
-                # parse answer from response
-                try:
-                    response_content = parse_answer(response)
-                except:
-                    print(f"Could not parse answer from response: {response}")
-                    response_content = {"answer": -1}
-                    continue
-
-                # get score
-                bp_scores[id] = response_content["answer"]
-
-            scores[i].append(bp_scores)
-
-    # save scores
-    scores_path = f"{path}/scores_single.json"
-    with open(scores_path, "w") as file:
-        json.dump(scores, file)
+    # save df as csv
+    df.to_csv(f"{path}/aggregated_scores.csv", sep=",", index=False)
 
 
 if __name__ == "__main__":
@@ -276,4 +279,20 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    evaluate(args.model, mode=args.mode)
+    models = [
+        "o1",
+        "gpt-4o",
+        "claude-3-5-sonnet-20241022",
+        "gemini-2.0-flash-exp",
+        "gemini",
+        "LlavaOnevision",
+        "Qwen2VL",
+        "InternVL2_5",
+    ]
+
+    for model in models:
+
+        args.model = model
+        evaluate(args.model, mode=args.mode)
+
+        aggregate_answers(args.model)

@@ -1,0 +1,14 @@
+Your task is to determine the spatial relationship between circles depicted in a 2D black and white diagram.
+
+The given diagram includes a number of circles. Your job is to analyze the proximity of these circles to each other. Specifically, you need to decide if there are two circles that are close to each other or if no such pair of circles exists.
+
+Take your time to thoroughly examine the diagram step-by-step and identify whether any two circles are positioned closely.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "proximity": <your answer>
+}
+```
+where <your answer> can be either "close" if two circles are near each other, or "not close" if no two circles are near each other.

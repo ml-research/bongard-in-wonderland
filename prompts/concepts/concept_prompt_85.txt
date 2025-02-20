@@ -1,0 +1,12 @@
+Your task is to determine the number of distinct parts in a 2D black and white diagram.
+
+The given diagram consists of multiple sections. Analyze the structure closely to identify the total number of distinct parts. Carefully count each separate part within the image to arrive at an accurate conclusion.
+
+Please decide carefully and think through the counting process step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "parts": <your answer>
+}
+```
+where `<your answer>` can be either "three" if there are three distinct parts or "five" if there are five distinct parts.

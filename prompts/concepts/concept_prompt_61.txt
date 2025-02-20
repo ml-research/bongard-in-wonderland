@@ -1,0 +1,12 @@
+Your task is to analyze a 2D black and white diagram where crosses and a line are depicted.
+
+The diagram includes several crosses and a line. Your goal is to determine whether the line precisely separates at least one cross into two equal halves. Carefully examine the placement of the line in relation to the crosses, looking for symmetry or lack thereof across the line.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "separation": <your answer>
+}
+```
+where <your answer> can be either "line separates the crosses in half" if the line divides at least one cross into two equal parts, or "line does not separate the crosses in half" if no such division occurs.

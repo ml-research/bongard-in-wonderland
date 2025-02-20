@@ -1,0 +1,13 @@
+Your task is to determine the positional relationship between a triangle and a circle depicted in a 2D black and white diagram.
+
+The given diagram features two primary shapes: a triangle and a circle. Carefully analyze the diagram to determine which shape is positioned on top of the other.
+
+Please decide carefully whether the triangle is on top of the circle or the circle is on top of the triangle. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+
+where <your answer> can be either "triangle on top" if the triangle is positioned above the circle, or "circle on top" if the circle is positioned above the triangle.

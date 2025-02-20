@@ -1,0 +1,12 @@
+Your task is to analyze the angle formed between the ends of a curve depicted in a 2D black and white diagram.
+
+The given diagram features a curve with two ends. Your goal is to determine whether the ends of this curve are parallel or perpendicular to each other. Carefully examine the orientation and relative position of the curve's ends to make this determination.
+
+Take your time to consider the structure of the curve step-by-step. Provide your response in the following format:
+
+```python
+answer = {
+    "relationship": <your answer>
+}
+```
+where <your answer> can be either "parallel" if the ends of the curve are parallel to each other or "perpendicular" if they are perpendicular to each other.

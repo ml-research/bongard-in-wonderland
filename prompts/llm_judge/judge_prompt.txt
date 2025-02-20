@@ -10,16 +10,17 @@ You will be given a correct answer that states a rule for the left side and a ru
 - Respond with "answer": 1 if the model's answer is correct according to the criteria above.
 - Respond with "answer": 0 if the model's answer is incorrect.
 - If the model's answer is only partially correct, consider whether the partial match sufficiently conveys the intended rule. If it does, respond with "answer": 1; otherwise, respond with "answer": 0.
+- Please be pragmatic with your judgement, e.g., when the answer implicitly addresses a figure it's okay and consider that there are multiple terms for the same thing, e.g., outlined figures can be considered as white shapes, and filled figures can be considered as shaded figures. 
 
 # Examples:
 ## Example 1:
 
 - Correct Answer:
-    - Left: Round shapes
-    - Right: Angular shapes
+    - Left: Round outlined shapes
+    - Right: Filled squares
 - Model Answer:
-    - Left: Circles
-    - Right: Squares
+    - Left: White circles
+    - Right: Black squares
 - Expected Response:
 
 ```python
@@ -41,6 +42,54 @@ You will be given a correct answer that states a rule for the left side and a ru
 ```python
 {
     "answer": 0
+}
+```
+
+## Example 3:
+
+- Correct Answer:
+    - Left: Square on top of circle
+    - Right: Circle on top of square
+- Model Answer:
+    - Left: square top
+    - Right: square bottom
+- Expected Response:
+
+```python
+{
+    "answer": 1
+}
+```
+
+## Example 4:
+
+- Correct Answer:
+    - Left: Circle
+    - Right: Triangle
+- Model Answer:
+    - Left: Circle
+    - Right: Non-circle
+- Expected Response:
+
+```python
+{
+    "answer": 0
+}
+```
+
+## Example 5:
+
+- Correct Answer:
+    - Left: Smooth contour figures 
+    - Right: Twisting contour figures
+- Model Answer:
+    - Left: smooth
+    - Right: jagged or zig-zag
+- Expected Response:
+
+```python
+{
+    "answer": 1
 }
 ```
 

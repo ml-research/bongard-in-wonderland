@@ -1,0 +1,12 @@
+Your task is to determine the shape depicted in a 2D black and white diagram.
+
+The given diagram illustrates a geometric figure. Carefully analyze the shape to determine whether it is a triangle or a circle. Pay close attention to the defining characteristics of each shape as you reach your decision.
+
+Please decide carefully and think through the features step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "shape": <your answer>
+}
+```
+where <your answer> can be either "Triangle" or "Circle".

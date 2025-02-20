@@ -1,0 +1,11 @@
+Your task is to determine the presence and direction of angles in a 2D black and white diagram.
+
+The given diagram may depict shapes with various angles. You need to identify whether there is an acute angle directed inward within the structure or if there are no such inward-directed angles present. Carefully analyze each corner and intersection within the diagram to decide the presence of an inward-directed acute angle.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+```python
+answer = {
+    "presence": <your answer>
+}
+```
+where <your answer> can be either "acute angle directed inward" if such an angle is present, or "no angle directed inward" if there are none.

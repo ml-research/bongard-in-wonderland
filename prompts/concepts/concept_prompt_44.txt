@@ -1,0 +1,12 @@
+Your task is to determine the arrangement of small circles in a 2D black and white diagram.
+
+The given diagram displays one or more arcs, and small circles are placed around them. Your goal is to identify whether the small circles are spread across different arcs or aligned on a single arc. Carefully analyze the diagram step-by-step to interpret the correct arrangement.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "arrangement": <your answer>
+}
+```
+where `<your answer>` can be either "different arcs" if the small circles are positioned on multiple arcs, or "one arc" if they are aligned on a single arc.

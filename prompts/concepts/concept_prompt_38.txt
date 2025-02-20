@@ -1,0 +1,15 @@
+Prompt: 
+
+Your task is to determine the relative size of a triangle in comparison to a circle in a 2D black and white diagram.
+
+The given diagram depicts both a triangle and a circle. You need to carefully analyze the diagram and determine whether the triangle is larger or smaller than the circle. Consider both figures' areas and dimensions to make your assessment.
+
+Please consider your decision carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "size_comparison": <your answer>
+}
+```
+
+where `<your answer>` can be either "larger" if the triangle is larger than the circle, or "smaller" if the triangle is smaller than the circle.

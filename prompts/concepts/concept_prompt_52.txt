@@ -1,0 +1,12 @@
+Your task is to determine the orientation of arrows depicted in a 2D black and white diagram.
+
+The given diagram shows multiple arrows. You need to decide whether the arrows are pointing in the same direction or in different directions. Carefully analyze the positions and orientations of each arrow step-by-step to identify their alignment.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+where <your answer> can be either "same direction" if all arrows point the same way, or "different directions" if the arrows point in varying directions.

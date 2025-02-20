@@ -1,0 +1,13 @@
+Your task is to evaluate the relative heights of the ends of branches in a 2D black and white diagram.
+
+The given diagram depicts two branches extending from a central point. Carefully observe the positions of the ends of these branches. Determine if the end of the right branch is higher or lower compared to the end of the left branch. Analyze the diagram thoroughly and step-by-step to arrive at a conclusion.
+
+Please make your decision carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```json
+answer = {
+    "relative_height": <your answer>
+}
+```
+
+where <your answer> can be either "higher" if the end of the right branch is higher than that of the left branch, or "lower" if it is lower.

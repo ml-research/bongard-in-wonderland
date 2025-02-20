@@ -1,0 +1,13 @@
+Your task is to determine the number of distinct lines depicted in a 2D black and white diagram.
+
+The given diagram shows one or more lines. You need to decide whether the image contains a single line or two separate lines. Carefully analyze the diagram step-by-step to identify the correct number of lines.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "number_of_lines": <your answer>
+}
+```
+
+where <your answer> can be either "one" if there is a single line in the diagram or "two" if there are two separate lines.

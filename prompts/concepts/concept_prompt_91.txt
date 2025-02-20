@@ -1,0 +1,14 @@
+Prompt: 
+
+Your task is to determine the number of identical elements present in a 2D black and white diagram.
+
+The given diagram displays a collection of elements that appear identical. Carefully count and analyze the identical elements within the image. Your goal is to decide whether there are exactly three or four identical elements.
+
+Please take your time to examine the diagram thoroughly. Reflect carefully and consider each instance step-by-step to ensure accuracy. Give your answer in the following format:
+
+```python
+answer = {
+    "count": <your answer>
+}
+```
+where <your answer> can be either "three" if there are three identical elements or "four" if there are four identical elements.

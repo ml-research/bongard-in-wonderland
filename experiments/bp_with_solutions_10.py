@@ -2,26 +2,26 @@ import random
 import sys
 
 sys.path.append("/workspace")
-from gemini.main import Gemini
-from gpt4.prompt_llm import GPT4Prompter
-from claude.main import Claude
+
+from experiments.zero_shot_bp import get_model_prompter
+from models.gemini.main import Gemini
+from models.gpt4.prompt_llm import GPT4Prompter
+from models.claude.main import Claude
+from models.llava_onevision.main import LlavaOnevisionModel
+from models.qwen2_vl.main import Qwen2VL
+from models.internvl2_5.main import InternVL2_5
+
 import os
 import argparse
 import json
+import time
 
 
 def main(args):
 
     model = args.model
 
-    if model == "gpt-4o":
-        prompter = GPT4Prompter(model=model)
-    elif model == "gemini":
-        prompter = Gemini()
-    elif model == "claude":
-        prompter = Claude()
-    else:
-        raise ValueError(f"Model {model} not supported")
+    prompter = get_model_prompter(model)
 
     system_prompt_path = "prompts/bongard/system_prompt.txt"
     system_prompt = open(system_prompt_path, "r").read()
@@ -47,7 +47,7 @@ def main(args):
 
         print(f"Processing BP {id+1} ...")
 
-        for seed in [1, 2, 3]:
+        for run in [1, 2, 3]:
 
             # correct solution
             current_solutions = {str(id + 1): solutions[str(id + 1)]}
@@ -70,12 +70,17 @@ def main(args):
                 "<SOLUTIONS>", json.dumps(current_solutions)
             )
 
+            start_time = time.time()
+
             response = prompter.prompt_with_images(
-                current_prompt, [image_path], system_prompt=system_prompt, seed=seed
+                current_prompt, [image_path], system_prompt=system_prompt, seed=run
             )
 
+            end_time = time.time()
+            print(f"Time taken: {end_time-start_time}")
+
             # save response to file
-            response_path = f"results/bongard/with_solutions_10/{model}/BP_{id+1}/response_seed_{seed}.txt"
+            response_path = f"results/bongard/with_solutions_10/{model}/BP_{id+1}/response_run_{run}.txt"
 
             if not os.path.exists(os.path.dirname(response_path)):
                 os.makedirs(os.path.dirname(response_path))
@@ -87,7 +92,7 @@ def main(args):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default="gpt-4o")
+    parser.add_argument("--model", type=str, default="o1")
 
     args = parser.parse_args()
 

@@ -1,0 +1,13 @@
+Your task is to identify the direction of a spiral depicted in a 2D black and white diagram.
+
+The image displays a spiral shape. Starting from the center and moving outward, determine whether the spiral curls in a clockwise or counterclockwise direction. Analyze the diagram carefully and deliberately to ensure accuracy.
+
+Please make your decision carefully. Take a deep breath and consider each step thoughtfully. Provide your answer in the following format:
+
+```plaintext
+answer = {
+    "direction": <your answer>
+}
+```
+
+where <your answer> can be either "counterclockwise" if the spiral curls in a counterclockwise direction or "clockwise" if the spiral curls in a clockwise direction.

@@ -1,0 +1,15 @@
+Your task is to evaluate the relative orientation of line segments in a 2D black and white diagram.
+
+The given diagram shows multiple line segments arranged in various orientations. Your job is to analyze the segments and determine whether the majority of them are almost parallel to each other or if there are large angles between them.
+
+Please examine the diagram carefully, taking into account the orientation and angles formed between the segments. Think step-by-step and provide your conclusion in the following format:
+
+
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+
+where <your answer> can be either "almost parallel" if the segments are nearly parallel to each other, or "large angles" if there are significant angles formed between the segments.

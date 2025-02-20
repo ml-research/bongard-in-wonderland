@@ -1,0 +1,12 @@
+Your task is to determine the orientation of the axis of a hole in relation to the axis of the main figure in a 2D black and white diagram.
+
+The given diagram features a geometric shape with a hole. You need to analyze whether the axis of this hole is aligned parallel or perpendicular to the primary axis of the figure. Carefully examine the diagram step-by-step to identify the orientation of the hole's axis.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+where <your answer> can be either "parallel" if the axis of the hole runs parallel to the figure axis, or "perpendicular" if it runs perpendicular to the figure axis.

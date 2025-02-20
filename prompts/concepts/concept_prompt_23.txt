@@ -1,0 +1,13 @@
+Your task is to determine the number of distinct figures depicted in a 2D black and white diagram.
+
+The given diagram presents one or more geometric shapes. You need to carefully analyze the diagram and decide whether there is a single figure or two distinct figures present. Observe the boundaries, intersections, and separations between shapes to make your determination.
+
+Please make your decision carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "count": <your answer>
+}
+```
+
+where <your answer> can be either "one" if there is one single figure or "two" if there are two distinct figures.

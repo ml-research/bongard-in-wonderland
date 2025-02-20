@@ -1,0 +1,12 @@
+Your task is to determine the relative positioning of a triangle and a circle in a given 2D black and white diagram.
+
+The diagram presents a triangle and a circle. Your objective is to decide whether the triangle is located inside the circle or if the circle is located inside the triangle. Analyze the shapes carefully and step-by-step to make the correct determination.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "containment": <your answer>
+}
+```
+where `<your answer>` can be either "Triangle inside of the circle" if the triangle is within the circle, or "Circle inside of the triangle" if the circle is within the triangle.

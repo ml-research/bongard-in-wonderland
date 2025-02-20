@@ -1,0 +1,11 @@
+Your task is to determine the arrangement of points in a 2D black and white diagram and identify whether any three points align in a straight line.
+
+The given diagram shows several points placed on a plane. You need to carefully analyze the arrangement to decide if there are any three points that lie on a single straight line. Examine the diagram thoroughly, considering various combinations of points to ensure accuracy.
+
+Please make your decision by thinking step-by-step. Give your answer in the following format:
+```python
+answer = {
+    "alignment": <your answer>
+}
+```
+where <your answer> can be either "three points on a straight line" if such an alignment exists, or "no three points on a straight line" if there is no such alignment.

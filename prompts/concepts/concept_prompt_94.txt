@@ -1,0 +1,12 @@
+Your task is to determine the position of a solid dark circle within a linear sequence in a 2D black and white diagram.
+
+The given diagram depicts a sequence of shapes arranged in a line. You need to assess the position of the solid dark circle within this sequence. Is the solid dark circle located at an end of the sequence or not? Analyze the entire sequence step-by-step to make a careful determination.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "not at end" if the solid dark circle is somewhere within the sequence not at an endpoint, or "at end" if the solid dark circle is located at one of the endpoints of the sequence.

@@ -1,0 +1,11 @@
+Your task is to identify the primary shape type present in a 2D black and white diagram. 
+
+The given diagram depicts various geometric forms. You need to determine whether the dominant shapes are polygons or curvilinear figures. Carefully analyze the diagram and focus on the characteristics of the shapes, such as straight edges and angles for polygons, versus smooth and flowing lines for curvilinear figures. Take a deep breath and think step-by-step.
+
+Please provide your conclusion in the following format:
+```python
+answer = {
+    "shape_type": <your answer>
+}
+```
+where <your answer> can be either "polygons" if the primary shapes have straight edges and corners, or "curvilinear figures" if the shapes are smooth and rounded.

@@ -1,0 +1,15 @@
+Prompt:
+
+Your task is to analyze a 2D black and white diagram where the shading intensity differs across the image. You need to determine on which side of the image the shading appears thicker.
+
+Take the time to carefully examine the shading variations across the diagram. Decide step-by-step whether the shading is more pronounced on the left or the right side. 
+
+Please provide your answer in the following format:
+
+```python
+answer = {
+    "thicker_shading_side": <your answer>
+}
+```
+
+where <your answer> can be either "right" if the shading is thicker on the right side or "left" if the shading is thicker on the left side.

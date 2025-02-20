@@ -1,0 +1,12 @@
+Your task is to determine the relative position of figures in a 2D black and white diagram.
+
+The given diagram displays one or more geometric figures positioned on either side of a vertical axis. You need to determine whether the figures are primarily on the left side or the right side of this axis. Carefully analyze the diagram step-by-step to identify the correct position of the figures in relation to the central axis.
+
+Please make sure to consider the entire arrangement before deciding. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "right" if the figures are mainly on the right side, or "left" if the figures are mainly on the left side.

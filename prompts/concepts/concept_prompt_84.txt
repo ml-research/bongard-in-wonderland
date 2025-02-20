@@ -1,0 +1,12 @@
+Your task is to determine the placement of a quadrangle in relation to a figure composed of circles in a 2D black and white diagram.
+
+The given diagram features a configuration of circles that form a figure, with a quadrangle positioned either outside or inside this figure. Carefully analyze the diagram step-by-step to identify the correct placement of the quadrangle in relation to the circle formation.
+
+Please decide carefully. Take a deep breath and think step-by-step. Provide your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "outside" if the quadrangle is outside the figure made by circles, or "inside" if the quadrangle is inside the figure made by circles.

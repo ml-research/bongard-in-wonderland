@@ -1,0 +1,12 @@
+Your task is to identify the point of origin for a tail in relation to the angles of a geometric shape depicted in a 2D black and white diagram.
+
+The given diagram shows a shape with a tail extending from one of its ends. Carefully observe whether the tail originates from the obtuse end or the acute end of the shape. Analyze the angles step-by-step to determine the correct point of origin.
+
+Please decide carefully and think methodically. Provide your answer in the following format:
+
+```python
+answer = {
+    "origin": <your answer>
+}
+```
+where <your answer> can be either "obtuse end" if the tail grows from the obtuse angle, or "acute end" if it grows from the acute angle.

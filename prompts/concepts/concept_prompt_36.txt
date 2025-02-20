@@ -1,0 +1,12 @@
+Your task is to determine the relative position of a triangle and a circle in a 2D black and white diagram.
+
+The given diagram displays a triangle and a circle. You need to identify which shape is positioned above the other. Carefully analyze the diagram step-by-step to accurately determine their positions.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "triangle above circle" if the triangle is positioned above the circle, or "circle above triangle" if the circle is positioned above the triangle.

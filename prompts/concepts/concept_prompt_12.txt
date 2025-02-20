@@ -1,0 +1,12 @@
+Your task is to assess the overall shape of a convex hull surrounding a figure in a 2D black and white diagram.
+
+The given diagram depicts a figure enclosed by its convex hull. Examine the convex hull to determine whether it appears elongated or compact. Carefully examine the characteristics of the enclosing shape and make an informed decision.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "shape": <your answer>
+}
+```
+where <your answer> can be either "elongated" if the hull appears stretched and narrow, or "compact" if the hull appears more rounded and contained.

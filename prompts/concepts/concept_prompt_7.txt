@@ -1,0 +1,15 @@
+Prompt: 
+
+Your task is to determine the orientation of elongation for figures depicted in a 2D black and white diagram.
+
+The given diagram shows one or more figures. Carefully analyze the shapes to determine whether they are elongated vertically or horizontally. Consider the general alignment and stretching direction of the figures.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+
+where <your answer> can be either "vertically" if the figures are elongated in a vertical fashion or "horizontally" if the figures are elongated in a horizontal manner.

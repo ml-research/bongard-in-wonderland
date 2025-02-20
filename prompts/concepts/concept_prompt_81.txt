@@ -1,0 +1,15 @@
+Your task is to analyze a 2D black and white diagram that contains both dark and outlined figures. You need to determine the spatial relationship between these figures based on their arrangement.
+
+In the given diagram, consider whether a straight line can separate dark figures from outlined figures, or alternatively, if the convex hulls of filled (dark) and outlined figures overlap. Carefully examine the positions and shapes of the figures to decide which condition applies.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "relationship": <your answer>
+}
+```
+
+where <your answer> can be one of the following:
+- "separable" if dark figures can be divided from outline figures by a straight line, or if their convex hulls overlap.
+- "inseparable" if dark figures are impossible to separate from outline figures by a straight line, or if their convex hulls do not overlap.

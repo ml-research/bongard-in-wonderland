@@ -1,0 +1,12 @@
+Your task is to analyze a diagram and determine the relative starting positions of the branches on either side.
+
+The given diagram includes two branches, one on the left and one on the right. Your task is to observe both branches and identify which one begins at a higher point. Carefully inspect the diagram, considering the beginning points of both branches, to ascertain their relative vertical positions.
+
+Please ensure your decision is thorough and precise. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "position": <your answer>
+}
+```
+where <your answer> can be either "higher" if the right branch begins at a higher point than the left branch, or "lower" if the right branch begins at a lower point than the left branch.

@@ -1,0 +1,12 @@
+Your task is to analyze a 2D black and white diagram where two geometric figures are shown, one inside the other. Carefully examine the number of angles of each figure.
+
+Determine whether the inside figure has fewer or more angles compared to the outside figure. Analyze each shape step-by-step to ensure accuracy in your assessment.
+
+Please consider your decision carefully. Once you are confident, provide your answer in the following format:
+
+```python
+answer = {
+    "relation": <your answer>
+}
+```
+where <your answer> should be either "fewer angles" if the inside figure has fewer angles than the outside figure or "more angles" if the inside figure has more angles than the outside figure.

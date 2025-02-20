@@ -1,0 +1,13 @@
+Your task is to determine the number of distinct parts in a 2D black and white diagram.
+
+The given diagram consists of multiple sections or segments. You need to carefully analyze the image to decide whether it is divided into four distinct parts or five distinct parts. Observe the boundaries and any distinguishing features of each section meticulously.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "number_of_parts": <your answer>
+}
+```
+
+where <your answer> can be either "four" if the diagram has four parts or "five" if there are five parts.

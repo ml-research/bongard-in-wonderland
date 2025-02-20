@@ -1,0 +1,12 @@
+Your task is to determine the orientation of a set of triangles depicted in a 2D black and white diagram.
+
+The given diagram shows a group of triangles. You need to analyze the shape of these triangles to determine whether they are elongated horizontally or vertically. Carefully observe the proportions and alignments of the triangles to identify their orientation.
+
+Please decide carefully. Take a deep breath and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "orientation": <your answer>
+}
+```
+where <your answer> can be either "horizontally" if the triangles are elongated horizontally, or "vertically" if they are elongated vertically.

@@ -1,0 +1,13 @@
+Your task is to determine whether a given image is empty or contains some elements.
+
+The provided image should be carefully analyzed to decide if it is truly empty or if there are any visible objects, patterns, or elements present within it. Consider all details and observe closely to make your determination.
+
+Please examine the image meticulously and think step-by-step. Give your answer in the following format:
+
+```python
+answer = {
+    "status": <your answer>
+}
+```
+
+where `<your answer>` can be either "empty" if the image is devoid of any discernible content or "not empty" if there are identifiable features.
