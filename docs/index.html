@@ -243,17 +243,23 @@
             <!-- Vs Humans. -->
             <div class="columns is-centered">
                 <div class="column is-full-width">
-                    <!-- <h2 class="title is-3">Comparison to Humans</h2>
+                    <h2 class="title is-3">Comparison to Humans</h2>
+
+                    <p>
+                        In our experiments, we also compared the performance of VLMs to human participants.
+                        We observe that the best human performance surpasses VLM performance by far. Interestingly, when
+                        looking at the number of BPs that have been solved at least once by any human or model, the
+                        humans were able to solve 95 of the 100 problems.
 
                     <div class="content has-text-justified">
                         <p>
                         </p>
                         <div class="hero-body">
 
-                            <img src="./static/images/task1.png" class="interpretability-image"
-                                alt="Results of VLMs on Bongard Problems" />
+                            <img src="./static/images/comparison_to_humans.png" class="interpretability-image"
+                                alt="Comparison of VLM performance to human performance" />
                         </div>
-                    </div> -->
+                    </div>
 
                 </div>
             </div>
@@ -261,6 +267,53 @@
             <!-- / Interpretability-->
     </section>
 
+
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <!-- Task 2. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Can VLMs detect concepts of the Bongard Problems?</h2>
+                        <div class="content has-text-justified">
+
+                            <p>
+                                We observed that the investigated VLMs
+                                performed poorly on the BP dataset. This could be due to
+                                difficulties in accurately perceiving the diagrams, as well as
+                                reasoning failures, such as incorrectly formulating rules that
+                                apply differently to each side. To investigate this in more
+                                detail, we designed a follow-up task where we asked the
+                                VLMs to detect the concepts of the Bongard Problems. The
+                                results show that the VLMs struggle to detect even the most
+                                basic concepts, such as simple spirals, which are trivial for
+                                humans.
+                            </p>
+
+                            <img src="./static/images/task2.png" class="interpretability-image"
+                                alt="Detect Concepts 1" />
+                            <br />
+                            <br />
+                            <p>
+                                Looking at the intersection of both tasks, we find that the intersection is surprisingly
+                                small. Intuitively, one might expect that if a model can solve a BP
+                                in the first place (Task 1), it should also be able to detect the concepts (Task 2) for
+                                this BP.This large discrepancy highlights a surprising gap between recognizing correct
+                                classifications and
+                                effectively applying that knowledge in problem-solving.
+                            </p>
+                            <br />
+                            <img src="./static/images/task1_2.png" class="interpretability-image"
+                                alt="Detect Concepts 1" />
+
+                        </div>
+                    </div>
+                </div>
+                <!--/ Abstract. -->
+
+            </div>
+        </div>
+    </section>
 
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
@@ -298,8 +351,7 @@
                 <div class="column is-8">
                     <div class="content">
                         <p>
-                            The authors would like to thank Frank Jäkel for useful
-                            discussions. This work was supported by the Priority
+                            This work was supported by the Priority
                             Program (SPP) 2422 in the subproject “Optimization of
                             active surface design of high-speed progressive tools us-
                             ing machine and deep learning algorithms“ funded by
