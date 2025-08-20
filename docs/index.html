@@ -221,9 +221,13 @@
 
                     <p>
                         Our experiments indicate that VLMs are still far from mastering Bongard problems.
-                        The best-performing model in our paper, o1, solved only 43 out of 100 problems.
-                        We also tested the newer model, o3, which did slightly better with 53 solved. However, nearly
-                        half the problems remain unsolved.
+                        The best-performing model in our paper, o1, solved only 43 out of 100 problems. <br /><br />
+                        *We also evaluated the newer models, o3 and GPT-5, which outperformed earlier versions by
+                        solving 53 and 64 out of 100 problems, respectively.
+                        Despite these gains, they still exhibited inconsistencies similar to previous models, such as
+                        failing to
+                        solve problems that are trivial for humans (e.g., BP#8) and issues with robust concept
+                        recognition (Task 2). <br />
                     </p>
 
 
@@ -237,34 +241,7 @@
                     </div>
                 </div>
             </div>
-            <br />
 
-
-            <!-- Vs Humans. -->
-            <div class="columns is-centered">
-                <div class="column is-full-width">
-                    <h2 class="title is-3">Comparison to Humans</h2>
-
-                    <p>
-                        In our experiments, we also compared the performance of VLMs to human participants.
-                        We observe that the best human performance surpasses VLM performance by far. Interestingly, when
-                        looking at the number of BPs that have been solved at least once by any human or model, the
-                        humans were able to solve 95 of the 100 problems.
-
-                    <div class="content has-text-justified">
-                        <p>
-                        </p>
-                        <div class="hero-body">
-
-                            <img src="./static/images/comparison_to_humans.png" class="interpretability-image"
-                                alt="Comparison of VLM performance to human performance" />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <br />
-            <!-- / Interpretability-->
     </section>
 
 
@@ -309,9 +286,39 @@
                         </div>
                     </div>
                 </div>
-                <!--/ Abstract. -->
-
+                <!--/ Task 2. -->
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+
+        <div class="container is-max-desktop">
+
+            <!-- Vs Humans. -->
+            <div class="columns is-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-3">Comparison to Humans</h2>
+
+                    <p>
+                        In our experiments, we also compared the performance of VLMs to human participants.
+                        We observe that the best human performance surpasses VLM performance by far. Interestingly, when
+                        looking at the number of BPs that have been solved at least once by any human or model, the
+                        humans were able to solve 95 of the 100 problems.
+
+                    <div class="content has-text-justified">
+                        <p>
+                        </p>
+                        <div class="hero-body">
+
+                            <img src="./static/images/comparison_to_humans.png" class="interpretability-image"
+                                alt="Comparison of VLM performance to human performance" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br />
         </div>
     </section>
 
@@ -321,7 +328,7 @@
             <pre><code>@article{wust2025bongard,
                 title={Bongard in Wonderland: Visual Puzzles that Still Make AI Go Mad?},
                 author={W{\"u}st, Antonia and Tobiasch, Tim and Helff, Lukas and Ibs, Inga and Stammer, Wolfgang and Dhami, Devendra S and Rothkopf, Constantin A and Kersting, Kristian},
-                journal={nternational Conference on Machine Learning (ICML)},
+                journal={International Conference on Machine Learning (ICML)},
                 year={2025}
       }
       </code></pre>
