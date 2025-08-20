@@ -1,0 +1,2 @@
+# Set to True if you want to use local models instead of API models
+use_local_models: False

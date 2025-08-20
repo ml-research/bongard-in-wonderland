@@ -5,29 +5,29 @@ from datetime import datetime
 
 
 class GPT4Prompter:
-    def __init__(self, model="gpt-4o", seed=42):
-        # load the API key from "open-ai-key"
-        with open("gpt4/open-ai-key-bongard", "r") as file:
-            api_key = file.read().strip()
+    def __init__(self, model="gpt-4o", key=None):
 
-        self.api_key = api_key
-        self.client = OpenAI(api_key=api_key)
+        if key:
+            self.api_key = key
+        else:
+            # load the API key from "open-ai-key"
+            with open("gpt4/open-ai-key-bongard", "r") as file:
+                api_key = file.read().strip()
+            self.api_key = api_key
+
+        self.client = OpenAI(api_key=self.api_key)
         if model == "gpt-4o":
             model = "gpt-4o-2024-08-06"
         if model == "o1":
             model = "o1-2024-12-17"
 
         self.model = model
-        self.seed = seed
         self.system_fingerprint = None
 
         print(f"Using model: {model}")
 
-    def prompt(self, prompt_text, system_prompt=None, seed=None, temp=None):
+    def prompt(self, prompt_text, system_prompt=None, temp=None):
         """Generate a response to a prompt using the OpenAI API."""
-
-        if seed is None:
-            seed = self.seed
 
         if system_prompt is None:
             system_prompt = "You are a helpful assistant that can describe images provided by the user in extreme detail. You are able to recognize abstract concepts in images like humans do. You are helping a scientist discover relevant patterns in images."
@@ -47,7 +47,6 @@ class GPT4Prompter:
                 {"role": "user", "content": prompt_text},
             ],
             model=self.model,
-            seed=seed,
             max_tokens=2000,
             temperature=temp,
         )
@@ -69,13 +68,7 @@ class GPT4Prompter:
         prompt_text: str,
         paths: [str],
         system_prompt=None,
-        seed=None,
-        # temperature=0.2,
-        # top_p=0.1,
     ):
-
-        if seed is None:
-            seed = self.seed
 
         if system_prompt is None:
             system_prompt = "You are a helpful assistant that can describe images provided by the user in extreme detail. You are able to recognize abstract concepts in images like humans do. You are helping a scientist discover relevant patterns in images."
@@ -83,6 +76,7 @@ class GPT4Prompter:
         # encode images
         encoded_images = [self._encode_image(path) for path in paths]
 
+        # Prepare messages based on the model type
         if self.model == "gpt-4o" or self.model == "gpt-4o-2024-08-06":
             messages = [
                 {
@@ -120,13 +114,12 @@ class GPT4Prompter:
                     model=self.model,
                     messages=messages,
                     max_tokens=2048,
-                    seed=seed,
                 )
             except Exception as e:
                 print("Error: ", e)
                 return ""
 
-        elif "o1" in self.model:
+        else:
             messages = [
                 {
                     "role": "user",
@@ -153,7 +146,6 @@ class GPT4Prompter:
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=messages,
-                    seed=seed,
                 )
             except Exception as e:
                 print("Error: ", e)

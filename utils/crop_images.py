@@ -7,10 +7,10 @@ def retrieve_images(image_path, start_point):
     large_image = Image.open(image_path)
 
     # Define parameters
-    image_width = 432  # Width of each small image
-    image_height = 432  # Height of each small image
-    horizontal_spacing = 48  # Spacing between images horizontally
-    vertical_spacing = 48  # Spacing between images vertically
+    image_width = 430  # Width of each small image
+    image_height = 430  # Height of each small image
+    horizontal_spacing = 50  # Spacing between images horizontally
+    vertical_spacing = 50  # Spacing between images vertically
     num_columns = 2  # Number of columns of small images
     num_rows = 3  # Number of rows of small images
     start_x = start_point[0]

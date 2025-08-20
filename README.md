@@ -34,6 +34,8 @@ The results of the evaluations will be stored in `results/`. The evaluation scri
 python experiments/zero_shot_bp.py --model "gpt-4o" --mode "zero_shot"
 ```
 
+You can also use the demo provided in `demo.ipynb` to run a model on individual BPs and inspect the results. 
+
 
 ## Citation
 If you find the code of this repository helpful, consider citing us.

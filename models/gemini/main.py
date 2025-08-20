@@ -2,8 +2,9 @@ import google.generativeai as genai
 
 
 class Gemini:
-    def __init__(self, model=None):
-        self.load_api_key()
+    def __init__(self, model=None, key=None):
+
+        self.load_api_key(key)
 
         if model is None or model == "gemini":
             model = "gemini-1.5-pro"
@@ -12,21 +13,22 @@ class Gemini:
 
         self.model = genai.GenerativeModel(model)
 
-    def load_api_key(self):
+    def load_api_key(self, key=None):
         # read the API key from txt file
-        path = "gemini/key.txt"
-        with open(path, "r") as file:
-            GOOGLE_API_KEY = file.read().strip()
+        if key:
+            GOOGLE_API_KEY = key
+        else:
+            path = "gemini/key.txt"
+            with open(path, "r") as file:
+                GOOGLE_API_KEY = file.read().strip()
 
         genai.configure(api_key=GOOGLE_API_KEY)
 
-    def prompt(self, prompt_text, system_prompt=None, seed=None):
+    def prompt(self, prompt_text, system_prompt=None):
         result = self.model.generate_content([system_prompt, "\n\n", prompt_text])
         return result.text
 
-    def prompt_with_images(
-        self, prompt_text, image_paths, system_prompt=None, seed=None
-    ):
+    def prompt_with_images(self, prompt_text, image_paths, system_prompt=None):
         image_path = image_paths[0]
         myfile = genai.upload_file(image_path)
         # print(f"{myfile=}")

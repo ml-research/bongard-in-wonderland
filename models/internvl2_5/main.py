@@ -30,9 +30,7 @@ class InternVL2_5:
         self.model = pipeline(self.model_name, backend_config=engine)
         self.max_tokens = 2048
 
-    def prompt_with_images(
-        self, prompt_text, image_paths, system_prompt=None, seed=None
-    ):
+    def prompt_with_images(self, prompt_text, image_paths, system_prompt=None):
 
         image_path = image_paths[0]
         image = load_image(image_path)

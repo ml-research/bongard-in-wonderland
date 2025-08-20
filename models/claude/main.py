@@ -12,17 +12,21 @@ def get_base64_encoded_image(image_path):
 
 
 class Claude:
-    def __init__(self, model=None):
+    def __init__(self, model=None, key=None):
 
         # load api key from file
-        api_key = open("claude/api_key.txt", "r").read()
+        if key:
+            api_key = key
+        else:
+            api_key = open("claude/api_key.txt", "r").read()
         self.model = anthropic.Anthropic(api_key=api_key)
+
         if model is None:
             self.model_name = "claude-3-5-sonnet-20241022"
         else:
             self.model_name = model
 
-    def prompt(self, prompt_text, system_prompt=None, seed=None):
+    def prompt(self, prompt_text, system_prompt=None):
 
         message_list = [
             {
@@ -37,9 +41,7 @@ class Claude:
 
         return response.content[0].text
 
-    def prompt_with_images(
-        self, prompt_text, image_paths, system_prompt=None, seed=None
-    ):
+    def prompt_with_images(self, prompt_text, image_paths, system_prompt=None):
 
         content = [
             {
@@ -58,17 +60,6 @@ class Claude:
             {
                 "role": "user",
                 "content": content,
-                # [
-                #     {
-                #         "type": "image",
-                #         "source": {
-                #             "type": "base64",
-                #             "media_type": "image/png",
-                #             "data": get_base64_encoded_image(image_paths[0]),
-                #         },
-                #     },
-                #     {"type": "text", "text": prompt_text},
-                # ],
             },
         ]
 

@@ -31,9 +31,7 @@ class Qwen2VL:
         self.max_tokens = 2048
         self.model_name = "Qwen2-VL-72B-Instruct"
 
-    def prompt_with_images(
-        self, prompt_text, image_paths, system_prompt=None, seed=None
-    ):
+    def prompt_with_images(self, prompt_text, image_paths, system_prompt=None):
 
         # TODO: url or path?
         # images = [Image.open(path) for path in image_paths]

@@ -9,3 +9,4 @@ qwen_vl_utils==0.0.10
 Requests==2.32.3
 rtpt==0.0.4
 tqdm==4.66.2
+pyyaml==6.0.1

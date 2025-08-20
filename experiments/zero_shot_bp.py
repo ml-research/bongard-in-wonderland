@@ -1,13 +1,20 @@
 import sys
+import yaml
 
 sys.path.append("/workspace")
 
+from utils.use_local_models import RUN_LOCAL_MODELS
 from models.gemini.main import Gemini
-from models.gpt4.prompt_llm import GPT4Prompter
+from models.gpt4.main import GPT4Prompter
 from models.claude.main import Claude
-from models.llava_onevision.main import LlavaOnevisionModel
-from models.qwen2_vl.main import Qwen2VL
-from models.internvl2_5.main import InternVL2_5
+
+with open("utils/params.yaml", "r") as file:
+    params = yaml.safe_load(file)
+RUN_LOCAL_MODELS = params.get("use_local_models", False)
+if RUN_LOCAL_MODELS:
+    from models.llava_onevision.main import LlavaOnevisionModel
+    from models.qwen2_vl.main import Qwen2VL
+    from models.internvl2_5.main import InternVL2_5
 
 import os
 import argparse
@@ -15,15 +22,14 @@ import time
 import json
 
 
-def get_model_prompter(model):
-    if model == "gpt-4o":
-        prompter = GPT4Prompter(model=model)
-    elif "o1" in model:
-        prompter = GPT4Prompter(model=model)
+def get_model_prompter(model, key=None):
+
+    if model in ["gpt-5", "gpt-4o", "o1", "o3"]:
+        prompter = GPT4Prompter(model=model, key=key)
     elif "gemini" in model:
-        prompter = Gemini(model)
+        prompter = Gemini(model, key=key)
     elif "claude" in model:
-        prompter = Claude()
+        prompter = Claude(key=key)
     elif model == "LlavaOnevision":
         prompter = LlavaOnevisionModel()
     elif model == "Qwen2VL":
